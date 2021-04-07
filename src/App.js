@@ -7,6 +7,7 @@ import ProductDetails from './components/ProductDetails'
 import {Route , Switch} from 'react-router-dom'
 import Admin from './components/Admin';
 import { useState } from 'react';
+import Weather from './components/Weather';
 
 function App() {
 
@@ -15,8 +16,9 @@ function App() {
 
   return (
     <div className="App">
+      
   <Navbar isConnected={isConnected} setIsConnected={setIsConnected} />  
-
+   
   <Switch>
   
   <Route exact path="/"  component={Home} />
@@ -28,6 +30,8 @@ function App() {
   <Route path="/details/:id"   component={ProductDetails} />
 
   <Route path="/admin" render={(props) => <Admin  isConnected={isConnected}  {...props}/>} />
+  
+  <Route path="/weather"  component={Weather} />
 
   </Switch>
 

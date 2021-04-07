@@ -24,6 +24,9 @@ const Navbar = ({isConnected , setIsConnected}) => {
           <Link class="nav-link" to="/admin">Admin</Link>
         </li>
         <li class="nav-item">
+          <Link class="nav-link" to="/weather">Weather</Link>
+        </li>
+        <li class="nav-item">
           <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
         </li>
       </ul>
